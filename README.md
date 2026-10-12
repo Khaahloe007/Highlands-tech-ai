@@ -368,10 +368,6 @@ export async function readSnapshot() {
 }
 ```
 
-**4. `src/lib/matrixData.js`** — the four CEO matrices + full system report (real server-side aggregates):
-
-```js
-import { base44 } from '@/api/base44Client';
 
 export const MATRIX_REFRESH_MS = 45000;
 export const AGENT_REFRESH_MS = 5000;
@@ -441,10 +437,7 @@ export async function buildSystemReport() {
       { title: 'Problem ledger', accent: 'violet', rows: [{ label: 'Problems tracked', value: problems }] },
     ],
   };
-}
-```
 
-**5. `src/lib/systemSettings.js`** — the settings panel source of truth:
 
 ```js
 import {
@@ -498,4 +491,4 @@ export const SETTINGS_GROUPS = [
 ];
 ```
 
-That's the complete system-logic layer — the engine, sanitation, channel, matrices and settings. Save them in your repo under `src/lib/`.
+
